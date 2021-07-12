@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IN ",
+    "IBN",
+    "IN "
+  ],
+  "key": {
+    "I": {
+      "tag": "forge:ingots/iron"
+    },
+    "N": {
+      "tag": "forge:nuggets/iron"
+    },
+    "B" : {
+      "item": "minecraft:bow"
+    }
+  },
+  "result": {
+    "item": "h3ks_tools:iron_bow"
+  }
+}

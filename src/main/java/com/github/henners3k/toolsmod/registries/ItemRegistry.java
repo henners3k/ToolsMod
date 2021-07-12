@@ -16,4 +16,7 @@ public final class ItemRegistry {
     public static RegistryObject<H3KBowItem> GOLD_BOW = ITEMS.register("gold_bow", () -> new H3KBowItem(1, 2, new Item.Properties().durability(208)));
     public static RegistryObject<H3KBowItem> DIAMOND_BOW = ITEMS.register("diamond_bow", () -> new H3KBowItem(1.75, 1, new Item.Properties().durability(10160)));
     public static RegistryObject<H3KBowItem> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new H3KBowItem(2, 2, new Item.Properties().durability(13219)));
+
+    // Other
+    public static RegistryObject<Item> DIAMOND_SHARD = ITEMS.register("diamond_shard", () -> new Item(new Item.Properties()));
 }

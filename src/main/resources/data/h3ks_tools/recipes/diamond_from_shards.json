@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "diamond",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "h3ks_tools:diamond_shard"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond"
+  }
+}

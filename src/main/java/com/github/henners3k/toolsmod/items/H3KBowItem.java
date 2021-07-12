@@ -9,6 +9,7 @@ import net.minecraft.item.*;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
@@ -17,11 +18,14 @@ import javax.annotation.Nullable;
 public class H3KBowItem extends BowItem {
 
     private final double damageMultiplier;
+    private final double arrowSpeedMultiplier;
 
-    public H3KBowItem(double damageMultiplier, Item.Properties properties) {
+    public H3KBowItem(double damageMultiplier, double movementMultiplier, Item.Properties properties) {
         super(properties);
         this.damageMultiplier = damageMultiplier;
+        this.arrowSpeedMultiplier = movementMultiplier;
     }
+
 
     @Nonnull
     public UseAction getUseAnimation(@Nullable ItemStack stack) {
@@ -56,6 +60,7 @@ public class H3KBowItem extends BowItem {
                             arrowEntity.setCritArrow(true);
 
                         arrowEntity.setBaseDamage(arrowEntity.getBaseDamage() * damageMultiplier);
+                        arrowEntity.setDeltaMovement(arrowEntity.getDeltaMovement().multiply(new Vector3d(arrowSpeedMultiplier, arrowSpeedMultiplier, arrowSpeedMultiplier)));
 
                         int powerEnchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.POWER_ARROWS, stack);
                         if (powerEnchantmentLevel > 0)

@@ -20,6 +20,8 @@ public final class ModItemModelsProperties {
     public static void registerAll() {
         registerBow(ItemRegistry.IRON_BOW.get());
         registerBow(ItemRegistry.GOLD_BOW.get());
+        registerBow(ItemRegistry.DIAMOND_BOW.get());
+        registerBow(ItemRegistry.NETHERITE_BOW.get());
     }
 
 }

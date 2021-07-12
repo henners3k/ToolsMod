@@ -1,0 +1,6 @@
+{
+    "parent": "h3ks_tools:item/netherite_bow",
+    "textures": {
+        "layer0": "h3ks_tools:item/netherite_bow_pulling_1"
+    }
+}

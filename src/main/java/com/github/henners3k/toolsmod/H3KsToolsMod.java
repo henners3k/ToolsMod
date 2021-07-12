@@ -1,5 +1,6 @@
 package com.github.henners3k.toolsmod;
 
+import com.github.henners3k.toolsmod.registries.ItemRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +28,8 @@ public class H3KsToolsMod {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+
+        ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void setup(final FMLCommonSetupEvent event) {

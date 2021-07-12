@@ -19,6 +19,7 @@ public final class ModItemModelsProperties {
 
     public static void registerAll() {
         registerBow(ItemRegistry.IRON_BOW.get());
+        registerBow(ItemRegistry.GOLD_BOW.get());
     }
 
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "h3ks_tools:item/gold_bow",
+  "textures": {
+    "layer0": "h3ks_tools:item/gold_bow_pulling_2"
+  }
+}

@@ -12,6 +12,6 @@ public final class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, H3KsToolsMod.MOD_ID);
 
     // Bows
-    public static RegistryObject<H3KBowItem> IRON_BOW = ITEMS.register("iron_bow", () -> new H3KBowItem(new Item.Properties().durability(1627)));
+    public static RegistryObject<H3KBowItem> IRON_BOW = ITEMS.register("iron_bow", () -> new H3KBowItem(1.5f, new Item.Properties().durability(1627)));
 
 }

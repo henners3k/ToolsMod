@@ -17,12 +17,17 @@ import javax.annotation.Nullable;
 public class H3KBowItem extends BowItem {
 
     private final double damageMultiplier;
+    private final float drawbackMultiplier;
 
-    public H3KBowItem(double damageMultiplier, Item.Properties properties) {
+    public H3KBowItem(double damageMultiplier, float drawbackMultiplier, Item.Properties properties) {
         super(properties);
         this.damageMultiplier = damageMultiplier;
+        this.drawbackMultiplier = drawbackMultiplier;
     }
 
+    public float getDrawbackMultiplier() {
+        return drawbackMultiplier;
+    }
 
     @Nonnull
     public UseAction getUseAnimation(@Nullable ItemStack stack) {
@@ -45,7 +50,7 @@ public class H3KBowItem extends BowItem {
                     projectileStack = new ItemStack(Items.ARROW);
                 }
 
-                float power = getPowerForTime(i);
+                float power = this.getPowerForTimeWithDM(i);
                 if (!((double) power < 0.1D)) {
                     boolean flag1 = player.abilities.instabuild || (projectileStack.getItem() instanceof ArrowItem && ((ArrowItem) projectileStack.getItem()).isInfinite(projectileStack, stack, player));
                     if (!world.isClientSide) {
@@ -92,5 +97,21 @@ public class H3KBowItem extends BowItem {
                 }
             }
         }
+    }
+
+    @Override
+    public int getUseDuration(@Nonnull ItemStack stack) {
+        return (int) (super.getUseDuration(stack) / drawbackMultiplier);
+    }
+
+    private float getPowerForTimeWithDM(int time) {
+        float f = (float) time / 20.0F;
+        f *= drawbackMultiplier;
+        f = (f * f + f * 2.0F) / 3.0F;
+        if (f > 1.0F) {
+            f = 1.0F;
+        }
+
+        return f;
     }
 }

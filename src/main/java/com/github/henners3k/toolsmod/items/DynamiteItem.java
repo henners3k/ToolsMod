@@ -9,6 +9,7 @@ import net.minecraft.item.UseAction;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
+import org.apache.logging.log4j.LogManager;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -36,8 +37,20 @@ public class DynamiteItem extends Item {
         return 72000;
     }
 
+    private float getPowerFromTime(int timeLeft) {
+        float maxAt = 2.5f * 20F;
+        float ticksPassed = getUseDuration(null) - timeLeft;
+        float power = 0.05f + ticksPassed / maxAt;
+        return Math.min(power, 1f);
+    }
+
     @Override
-    public void releaseUsing(@Nonnull ItemStack stack, @Nonnull World world, @Nonnull LivingEntity entity, int usedFor) {
+    public void releaseUsing(@Nonnull ItemStack stack, @Nonnull World world, @Nonnull LivingEntity entity, int timeLeft) {
+
+        float power = getPowerFromTime(timeLeft);
+        LogManager.getLogger().info(power);
+        if (power <= 0.15f)
+            return;
 
         if (entity instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) entity;
@@ -45,7 +58,7 @@ public class DynamiteItem extends Item {
             if (!world.isClientSide) {
                 DynamiteEntity dynamiteEntity = new DynamiteEntity(world, entity);
                 dynamiteEntity.setItem(stack);
-                dynamiteEntity.shootFromRotation(entity, entity.xRot, entity.yRot, 0.0F, 1.5F, 1.0F);
+                dynamiteEntity.shootFromRotation(entity, entity.xRot, entity.yRot, 0.0F, power * 2F, 1.0F);
                 world.addFreshEntity(dynamiteEntity);
             }
 

@@ -1,6 +1,8 @@
 package com.github.henners3k.toolsmod;
 
 import com.github.henners3k.toolsmod.registries.ItemRegistry;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -13,6 +15,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(H3KsToolsMod.MOD_ID)
 public class H3KsToolsMod {
     public static final String MOD_ID = "h3ks_tools";
+
+    public static final ItemGroup ITEM_GROUP = new H3KsToolsItemGroup("h3ks_tools");
 
     public H3KsToolsMod() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);

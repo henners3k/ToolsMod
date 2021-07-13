@@ -1,9 +1,11 @@
 package com.github.henners3k.toolsmod.items;
 
+import com.github.henners3k.toolsmod.entities.DynamiteEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.UseAction;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
@@ -20,9 +22,9 @@ public class DynamiteItem extends Item {
     @Nonnull
     public ActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
         ItemStack stack = player.getItemInHand(hand);
-        boolean isEmpty = player.getProjectile(stack).isEmpty();
+        boolean hasAmmo = !stack.isEmpty();
 
-        if (!player.abilities.instabuild && !isEmpty)
+        if (!player.abilities.instabuild && !hasAmmo)
             return ActionResult.fail(stack);
 
         player.startUsingItem(hand);
@@ -41,10 +43,12 @@ public class DynamiteItem extends Item {
             PlayerEntity player = (PlayerEntity) entity;
 
             if (!world.isClientSide) {
-                // THROW DYNAMITE
-
-                LogManager.getLogger().info("BOOM");
+                DynamiteEntity dynamiteEntity = new DynamiteEntity(world, entity);
+                dynamiteEntity.setItem(stack);
+                dynamiteEntity.shootFromRotation(entity, entity.xRot, entity.yRot, 0.0F, 1.5F, 1.0F);
+                world.addFreshEntity(dynamiteEntity);
             }
+
 
             if (!player.abilities.instabuild) {
                 stack.shrink(1);
@@ -54,5 +58,11 @@ public class DynamiteItem extends Item {
 
         }
     }
+
+    @Override
+    public UseAction getUseAnimation(ItemStack p_77661_1_) {
+        return UseAction.SPEAR;
+    }
+
 
 }

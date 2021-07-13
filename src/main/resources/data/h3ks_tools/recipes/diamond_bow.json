@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IN ",
+    "IBN",
+    "IN "
+  ],
+  "key": {
+    "I": {
+      "tag": "forge:gems/diamond"
+    },
+    "N": {
+      "item": "h3ks_tools:diamond_shard"
+    },
+    "B" : {
+      "item": "h3ks_tools:gold_bow"
+    }
+  },
+  "result": {
+    "item": "h3ks_tools:diamond_bow"
+  }
+}

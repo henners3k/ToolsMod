@@ -5,7 +5,7 @@ license = "All rights reserved"
 modId = "h3ks_tools"
 version = "${file.jarVersion}"
 displayName = "H3K's Tools Mod"
-# logoFile = "h3ks_tools.png"
+logoFile = "h3ks_tools.png"
 authors = "henners3k"
 description = "Adds some additional tools and stuff to minecraft!"
 

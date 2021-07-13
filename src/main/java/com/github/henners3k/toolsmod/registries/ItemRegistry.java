@@ -2,6 +2,7 @@ package com.github.henners3k.toolsmod.registries;
 
 import com.github.henners3k.toolsmod.H3KsToolsMod;
 import com.github.henners3k.toolsmod.items.DynamiteItem;
+import com.github.henners3k.toolsmod.items.ExplosiveArrowItem;
 import com.github.henners3k.toolsmod.items.H3KBowItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -18,9 +19,9 @@ public final class ItemRegistry {
     public static RegistryObject<H3KBowItem> DIAMOND_BOW = ITEMS.register("diamond_bow", () -> new H3KBowItem(1.75, 1, new Item.Properties().durability(10160).tab(H3KsToolsMod.ITEM_GROUP)));
     public static RegistryObject<H3KBowItem> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new H3KBowItem(2, 2, new Item.Properties().durability(13219).tab(H3KsToolsMod.ITEM_GROUP)));
 
-    // Other
+    // Dynamite Related
     public static RegistryObject<DynamiteItem> DYNAMITE = ITEMS.register("dynamite", () -> new DynamiteItem(new Item.Properties().tab(H3KsToolsMod.ITEM_GROUP)));
-
+    public static RegistryObject<ExplosiveArrowItem> EXPLOSIVE_ARROW = ITEMS.register("explosive_arrow", () -> new ExplosiveArrowItem((new Item.Properties().tab(H3KsToolsMod.ITEM_GROUP))));
     // Materials
     public static RegistryObject<Item> DIAMOND_SHARD = ITEMS.register("diamond_shard", () -> new Item(new Item.Properties().tab(H3KsToolsMod.ITEM_GROUP)));
 }

@@ -9,9 +9,9 @@ import net.minecraft.item.UseAction;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
-import org.apache.logging.log4j.LogManager;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class DynamiteItem extends Item {
     public DynamiteItem(Properties properties) {
@@ -20,7 +20,7 @@ public class DynamiteItem extends Item {
 
     @Override
     @Nonnull
-    public ActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
+    public ActionResult<ItemStack> use(@Nullable World world, PlayerEntity player, @Nonnull Hand hand) {
         ItemStack stack = player.getItemInHand(hand);
         boolean hasAmmo = !stack.isEmpty();
 
@@ -32,12 +32,12 @@ public class DynamiteItem extends Item {
     }
 
     @Override
-    public int getUseDuration(ItemStack stack) {
+    public int getUseDuration(@Nullable ItemStack stack) {
         return 72000;
     }
 
     @Override
-    public void releaseUsing(ItemStack stack, World world, LivingEntity entity, int usedFor) {
+    public void releaseUsing(@Nonnull ItemStack stack, @Nonnull World world, @Nonnull LivingEntity entity, int usedFor) {
 
         if (entity instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) entity;
@@ -60,9 +60,9 @@ public class DynamiteItem extends Item {
     }
 
     @Override
-    public UseAction getUseAnimation(ItemStack p_77661_1_) {
+    @Nonnull
+    public UseAction getUseAnimation(@Nullable ItemStack stack) {
         return UseAction.SPEAR;
     }
-
 
 }

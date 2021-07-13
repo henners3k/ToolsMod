@@ -52,12 +52,6 @@ public class DynamiteEntity extends ProjectileItemEntity {
 
     }
 
-//    @Override
-//    protected void onHit(RayTraceResult res) {
-//        super.onHit(res);
-//        explode();
-//    }
-
     @Override
     protected void onHitBlock(BlockRayTraceResult res) {
         super.onHitBlock(res);

@@ -3,6 +3,7 @@
 ## Features
 
 - Iron, Gold, Diamond and Netherite Strengthened Bows
+- Dynamite
 
 ## Upcoming Features
 
@@ -11,7 +12,6 @@
 - Iron, Gold, Diamond and Netherite Strengthened Crossbows
 - Iron, Gold, Diamond and Netherite Tipped Arrows
 - Wooden, Iron Plated, Gold Played, Diamond Played and Netherite Plated Shields
-- Throwable Dynamite
 - Explosive Arrows
 - Arrows of the Ocean
 - Wooden, Stone, Iron, Golden, Diamond and Netherite Daggers

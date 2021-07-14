@@ -14,12 +14,12 @@ import net.minecraft.world.World;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-public class H3KBowItem extends BowItem {
+public class StrengthenedBowItem extends BowItem {
 
     private final double damageMultiplier;
     private final float drawbackMultiplier;
 
-    public H3KBowItem(double damageMultiplier, float drawbackMultiplier, Item.Properties properties) {
+    public StrengthenedBowItem(double damageMultiplier, float drawbackMultiplier, Item.Properties properties) {
         super(properties);
         this.damageMultiplier = damageMultiplier;
         this.drawbackMultiplier = drawbackMultiplier;

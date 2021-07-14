@@ -6,7 +6,7 @@
 ## Added
 -  Dynamite
 
-# v0.1.2 - 13/07/21
+# v0.1.2 - 14/07/21
 ## Added
 -  Explosive Arrows
 ##  Fixed

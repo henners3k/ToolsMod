@@ -1,13 +1,11 @@
 package com.github.henners3k.toolsmod;
 
-import com.github.henners3k.toolsmod.client.renderers.entities.ExplosiveArrowRenderer;
+import com.github.henners3k.toolsmod.client.ModItemModelsProperties;
+import com.github.henners3k.toolsmod.client.renderers.entities.ModRenderingHandler;
 import com.github.henners3k.toolsmod.registries.EntityRegistry;
 import com.github.henners3k.toolsmod.registries.ItemRegistry;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -37,9 +35,7 @@ public class H3KsToolsMod {
 
     private void clientSetup(final FMLClientSetupEvent event) {
         event.enqueueWork(ModItemModelsProperties::registerAll);
-
-        RenderingRegistry.registerEntityRenderingHandler(EntityRegistry.DYNAMITE.get(), manager -> new SpriteRenderer<>(manager, Minecraft.getInstance().getItemRenderer()));
-        RenderingRegistry.registerEntityRenderingHandler(EntityRegistry.EXPLOSIVE_ARROW.get(), ExplosiveArrowRenderer::new);
+        ModRenderingHandler.registerEntities();
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

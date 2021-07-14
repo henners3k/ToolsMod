@@ -1,4 +1,4 @@
-package com.github.henners3k.toolsmod;
+package com.github.henners3k.toolsmod.client;
 
 import com.github.henners3k.toolsmod.items.H3KBowItem;
 import com.github.henners3k.toolsmod.registries.ItemRegistry;

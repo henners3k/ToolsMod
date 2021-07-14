@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "h3ks_tools:item/explosive_arrow"
+  }
+}

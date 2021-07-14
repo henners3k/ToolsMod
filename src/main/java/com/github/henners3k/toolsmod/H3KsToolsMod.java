@@ -1,5 +1,6 @@
 package com.github.henners3k.toolsmod;
 
+import com.github.henners3k.toolsmod.client.renderers.entities.ExplosiveArrowRenderer;
 import com.github.henners3k.toolsmod.registries.EntityRegistry;
 import com.github.henners3k.toolsmod.registries.ItemRegistry;
 import net.minecraft.client.Minecraft;
@@ -38,6 +39,7 @@ public class H3KsToolsMod {
         event.enqueueWork(ModItemModelsProperties::registerAll);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityRegistry.DYNAMITE.get(), manager -> new SpriteRenderer<>(manager, Minecraft.getInstance().getItemRenderer()));
+        RenderingRegistry.registerEntityRenderingHandler(EntityRegistry.EXPLOSIVE_ARROW.get(), ExplosiveArrowRenderer::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

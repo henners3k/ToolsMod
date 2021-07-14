@@ -1,6 +1,6 @@
-package com.github.henners3k.toolsmod.items;
+package com.github.henners3k.toolsmod.item;
 
-import com.github.henners3k.toolsmod.entities.ExplosiveArrowEntity;
+import com.github.henners3k.toolsmod.entity.ExplosiveArrowEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.ArrowItem;

@@ -1,9 +1,9 @@
 package com.github.henners3k.toolsmod.registries;
 
 import com.github.henners3k.toolsmod.H3KsToolsMod;
-import com.github.henners3k.toolsmod.items.DynamiteItem;
-import com.github.henners3k.toolsmod.items.ExplosiveArrowItem;
-import com.github.henners3k.toolsmod.items.StrengthenedBowItem;
+import com.github.henners3k.toolsmod.item.DynamiteItem;
+import com.github.henners3k.toolsmod.item.ExplosiveArrowItem;
+import com.github.henners3k.toolsmod.item.StrengthenedBowItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

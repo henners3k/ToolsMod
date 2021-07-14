@@ -1,7 +1,7 @@
-package com.github.henners3k.toolsmod.client.renderers.entities;
+package com.github.henners3k.toolsmod.client.renderer.entity;
 
 import com.github.henners3k.toolsmod.H3KsToolsMod;
-import com.github.henners3k.toolsmod.entities.ExplosiveArrowEntity;
+import com.github.henners3k.toolsmod.entity.ExplosiveArrowEntity;
 import net.minecraft.client.renderer.entity.ArrowRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.util.ResourceLocation;

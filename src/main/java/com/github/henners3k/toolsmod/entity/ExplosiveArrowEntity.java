@@ -1,4 +1,4 @@
-package com.github.henners3k.toolsmod.entities;
+package com.github.henners3k.toolsmod.entity;
 
 import com.github.henners3k.toolsmod.registries.EntityRegistry;
 import net.minecraft.entity.EntityType;

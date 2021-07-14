@@ -1,6 +1,6 @@
 package com.github.henners3k.toolsmod.client;
 
-import com.github.henners3k.toolsmod.items.StrengthenedBowItem;
+import com.github.henners3k.toolsmod.item.StrengthenedBowItem;
 import com.github.henners3k.toolsmod.registries.ItemRegistry;
 import net.minecraft.item.ItemModelsProperties;
 import net.minecraft.util.ResourceLocation;

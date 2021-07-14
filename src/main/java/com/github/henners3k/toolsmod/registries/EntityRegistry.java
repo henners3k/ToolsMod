@@ -1,8 +1,8 @@
 package com.github.henners3k.toolsmod.registries;
 
 import com.github.henners3k.toolsmod.H3KsToolsMod;
-import com.github.henners3k.toolsmod.entities.DynamiteEntity;
-import com.github.henners3k.toolsmod.entities.ExplosiveArrowEntity;
+import com.github.henners3k.toolsmod.entity.DynamiteEntity;
+import com.github.henners3k.toolsmod.entity.ExplosiveArrowEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.fml.RegistryObject;

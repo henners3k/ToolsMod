@@ -1,4 +1,4 @@
-package com.github.henners3k.toolsmod.items;
+package com.github.henners3k.toolsmod.item;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;

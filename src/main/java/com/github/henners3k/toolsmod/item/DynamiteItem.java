@@ -1,6 +1,6 @@
-package com.github.henners3k.toolsmod.items;
+package com.github.henners3k.toolsmod.item;
 
-import com.github.henners3k.toolsmod.entities.DynamiteEntity;
+import com.github.henners3k.toolsmod.entity.DynamiteEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

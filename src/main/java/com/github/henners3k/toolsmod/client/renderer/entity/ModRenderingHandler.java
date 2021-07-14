@@ -1,4 +1,4 @@
-package com.github.henners3k.toolsmod.client.renderers.entities;
+package com.github.henners3k.toolsmod.client.renderer.entity;
 
 import com.github.henners3k.toolsmod.registries.EntityRegistry;
 import net.minecraft.client.Minecraft;

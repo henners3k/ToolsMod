@@ -27,12 +27,15 @@
 - Night Vision Goggles
 - Miners Helmet
 
-## Enchantments 
+## Enchantments
+
 - Vein Miner (Mines whole ore vein)
 - Excavation (Mines Larger Area)
+- Lumbering (Chops whole tree down)
 - Blazing (Smelts ore when mined)
 - Wetter (Increases watering can range)
 
-## Other Ideas / Requests 
+## Other Ideas / Requests
+
 - Villager to Sell Archery Supplies
 - Upgrade to Trident

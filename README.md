@@ -4,6 +4,7 @@
 
 - Iron, Gold, Diamond and Netherite Strengthened Bows
 - Dynamite
+- Explosive Arrows
 
 ## Upcoming Features
 
@@ -12,7 +13,6 @@
 - Iron, Gold, Diamond and Netherite Strengthened Crossbows
 - Iron, Gold, Diamond and Netherite Tipped Arrows
 - Wooden, Iron Plated, Gold Played, Diamond Played and Netherite Plated Shields
-- Explosive Arrows
 - Arrows of the Ocean
 - Wooden, Stone, Iron, Golden, Diamond and Netherite Daggers
 - Stone, Iron, Golden, Diamond and Netherite Battle Axes
@@ -32,3 +32,7 @@
 - Excavation (Mines Larger Area)
 - Blazing (Smelts ore when mined)
 - Wetter (Increases watering can range)
+
+## Other Ideas / Requests 
+- Villager to Sell Archery Supplies
+- Upgrade to Trident

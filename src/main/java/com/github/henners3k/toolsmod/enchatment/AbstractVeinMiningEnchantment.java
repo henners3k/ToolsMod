@@ -7,7 +7,6 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
@@ -71,7 +70,7 @@ public abstract class AbstractVeinMiningEnchantment extends Enchantment {
 
             for (int x = -1; x <= 1; x++)
                 for (int y = -1; y <= 1; y++)
-                  A  for (int z = -1; z <= 1; z++) {
+                    for (int z = -1; z <= 1; z++) {
                         BlockPos pos = currentPos.offset(x, y, z);
                         Block block = world.getBlockState(pos).getBlock();
                         if (block.equals(targetBlock))

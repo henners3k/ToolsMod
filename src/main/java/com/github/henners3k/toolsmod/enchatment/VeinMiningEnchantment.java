@@ -3,10 +3,10 @@ package com.github.henners3k.toolsmod.enchatment;
 import com.github.henners3k.toolsmod.registries.EnchantmentRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.OreBlock;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.tileentity.TileEntity;
@@ -33,11 +33,12 @@ public class VeinMiningEnchantment extends Enchantment {
         if (EnchantmentHelper.getItemEnchantmentLevel(EnchantmentRegistry.VEIN_MINING.get(), player.getMainHandItem()) == 0)
             return;
 
-        boolean silkTouch = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, player.getMainHandItem()) > 0;
-
         BlockPos minedPos = event.getPos();
         Block targetBlock = event.getState().getBlock();
         IWorld iworld = event.getWorld();
+
+        if (!allowedBlock(targetBlock))
+            return;
 
         if (!(iworld instanceof ServerWorld)) {
             LogManager.getLogger().error("FAK!");
@@ -75,21 +76,10 @@ public class VeinMiningEnchantment extends Enchantment {
 
         } while (n <= MAX_BREAK && !queue.isEmpty());
 
-//        if (silkTouch) {
-//            int maxStack = new ItemStack(targetBlock).getMaxStackSize();
-//
-//            for (int i = 0; i < n / maxStack; i++) {
-//                ItemEntity itemEntity = new ItemEntity(world, minedPos.getX(), minedPos.getY(), minedPos.getZ(), new ItemStack(targetBlock, maxStack));
-//                world.addFreshEntity(itemEntity);
-//            }
-//
-//            if (n % maxStack != 0) {
-//                ItemEntity itemEntity = new ItemEntity(world, minedPos.getX(), minedPos.getY(), minedPos.getZ(), new ItemStack(targetBlock, n % maxStack));
-//                world.addFreshEntity(itemEntity);
-//            }
-//
-//        }
+    }
 
+    private static boolean allowedBlock(Block query) {
+        return query instanceof OreBlock;
     }
 
     @Override

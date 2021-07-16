@@ -2,6 +2,7 @@ package com.github.henners3k.toolsmod;
 
 import com.github.henners3k.toolsmod.client.ModItemModelsProperties;
 import com.github.henners3k.toolsmod.client.renderer.entity.ModRenderingHandler;
+import com.github.henners3k.toolsmod.registries.EnchantmentRegistry;
 import com.github.henners3k.toolsmod.registries.EntityRegistry;
 import com.github.henners3k.toolsmod.registries.ItemRegistry;
 import net.minecraft.item.ItemGroup;
@@ -28,6 +29,7 @@ public class H3KsToolsMod {
 
         ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         EntityRegistry.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        EnchantmentRegistry.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void setup(final FMLCommonSetupEvent event) {

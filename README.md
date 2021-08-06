@@ -2,9 +2,17 @@
 
 ## Features
 
+### Items
+
 - Iron, Gold, Diamond and Netherite Strengthened Bows
 - Dynamite
 - Explosive Arrows
+
+### Enchantments
+
+- Vein Miner (Mines whole ore vein)
+- Excavation (Mines Larger Area)
+- Lumbering (Chops whole tree down)
 
 ## Upcoming Features
 
@@ -27,15 +35,12 @@
 - Night Vision Goggles
 - Miners Helmet
 
-## Enchantments
+### Enchantments
 
-- Vein Miner (Mines whole ore vein)
-- Excavation (Mines Larger Area)
-- Lumbering (Chops whole tree down)
 - Blazing (Smelts ore when mined)
 - Wetter (Increases watering can range)
 
-## Other Ideas / Requests
+### Other Ideas / Requests
 
 - Villager to Sell Archery Supplies
 - Upgrade to Trident

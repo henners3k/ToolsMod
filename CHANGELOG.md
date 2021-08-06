@@ -11,3 +11,9 @@
 -  Explosive Arrows
 ##  Fixed
 - Missing Dynamite Recipes
+
+# v0.2.0 - 06/08/21
+## Added
+- Vein Miner Enchantment
+- Lumber Jack Enchantment
+- Excavation Enchantment
